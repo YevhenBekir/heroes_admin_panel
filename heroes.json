@@ -1,0 +1,41 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Костянтин Вікторович",
+      "description": "Like Aquaman, but not from DC",
+      "element": "fire"
+    },
+    {
+      "id": 2,
+      "name": "Артем Валерійович",
+      "description": "Like Aquaman, but not from DC",
+      "element": "wind"
+    },
+    {
+      "id": 3,
+      "name": "Павло Андрійович",
+      "description": "Like Aquaman, but not from DC",
+      "element": "water"
+    },
+    {
+      "id": 5,
+      "name": "Василь Вадимович",
+      "description": "Like Aquaman, but not from DC",
+      "element": "nothing"
+    },
+    {
+      "id": 6,
+      "name": "Анатолій Радеонович",
+      "description": "Like Aquaman, but not from DC",
+      "element": "water"
+    }
+  ],
+  "filters": [
+    "all",
+    "fire",
+    "water",
+    "wind",
+    "earth"
+  ]
+}
