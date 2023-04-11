@@ -2,32 +2,44 @@
   "heroes": [
     {
       "id": 1,
-      "name": "Костянтин Вікторович",
-      "description": "Like Aquaman, but not from DC",
-      "element": "fire"
-    },
-    {
-      "id": 2,
-      "name": "Артем Валерійович",
-      "description": "Like Aquaman, but not from DC",
-      "element": "wind"
-    },
-    {
-      "id": 3,
-      "name": "Павло Андрійович",
-      "description": "Like Aquaman, but not from DC",
+      "name": "Анатолій Андрійович",
+      "description": "The new Hero in the CD world",
       "element": "water"
     },
     {
-      "id": 5,
+      "id": 2,
+      "name": "Костянтин Борисович",
+      "description": "The new Hero in the CD world",
+      "element": "earth"
+    },
+    {
+      "id": 3,
       "name": "Василь Вадимович",
-      "description": "Like Aquaman, but not from DC",
-      "element": "nothing"
+      "description": "The new Hero in the CD world",
+      "element": "fire"
+    },
+    {
+      "id": 4,
+      "name": "Веніамін Григорійович",
+      "description": "The new Hero in the CD world",
+      "element": "wind"
+    },
+    {
+      "id": 5,
+      "name": "Павло Костянтинович",
+      "description": "The new Hero in the CD world",
+      "element": "water"
     },
     {
       "id": 6,
-      "name": "Анатолій Радеонович",
-      "description": "Like Aquaman, but not from DC",
+      "name": "Аркадій Полікарпович",
+      "description": "The new Hero in the CD world",
+      "element": "wind"
+    },
+    {
+      "id": 7,
+      "name": "Максим Володимирович",
+      "description": "The new Hero in the CD world",
       "element": "water"
     }
   ],

@@ -27,7 +27,8 @@ const reducer = (state = initialState, action) => {
         (item) => item.id !== action.payload
       );
       return {
-        ...newHeroes,
+        ...state,
+        heroes: newHeroes,
       };
     default:
       return state;
