@@ -19,12 +19,6 @@
       "element": "fire"
     },
     {
-      "id": 4,
-      "name": "Веніамін Григорійович",
-      "description": "The new Hero in the CD world",
-      "element": "wind"
-    },
-    {
       "id": 5,
       "name": "Павло Костянтинович",
       "description": "The new Hero in the CD world",
@@ -41,13 +35,39 @@
       "name": "Максим Володимирович",
       "description": "The new Hero in the CD world",
       "element": "water"
+    },
+    {
+      "id": "c6848ff6-30a9-4ea9-a05f-87d0d2085d3c",
+      "name": "Реджеп Річі-Джуніор Ждун",
+      "description": "М'яу !",
+      "element": ""
     }
   ],
   "filters": [
-    "all",
-    "fire",
-    "water",
-    "wind",
-    "earth"
+    {
+      "name": "all",
+      "label": "All",
+      "className": "btn-outline-dark"
+    },
+    {
+      "name": "fire",
+      "label": "Fire",
+      "className": "btn-danger"
+    },
+    {
+      "name": "water",
+      "label": "Water",
+      "className": "btn-primary"
+    },
+    {
+      "name": "wind",
+      "label": "Wind",
+      "className": "btn-success"
+    },
+    {
+      "name": "earth",
+      "label": "Earth",
+      "className": "btn-secondary"
+    }
   ]
 }

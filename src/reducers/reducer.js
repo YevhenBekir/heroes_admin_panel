@@ -2,6 +2,9 @@ const initialState = {
   heroes: [],
   heroesLoadingStatus: "idle",
   filters: [],
+  filtersLoadingStatus: "idle",
+  activeFilter: "all",
+  filteredHeroes: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -22,13 +25,22 @@ const reducer = (state = initialState, action) => {
         ...state,
         heroesLoadingStatus: "error",
       };
+
+    //
+
     case "DELETE_ONE_HERO":
-      const newHeroes = state.heroes.filter(
+      const changedHeroesList = state.heroes.filter(
         (item) => item.id !== action.payload
       );
       return {
         ...state,
-        heroes: newHeroes,
+        heroes: changedHeroesList,
+      };
+    case "CREATE_NEW_HERO":
+      const newHeroesList = [...state.heroes, action.payload];
+      return {
+        ...state,
+        heroes: newHeroesList,
       };
     default:
       return state;
