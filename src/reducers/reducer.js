@@ -89,9 +89,7 @@ const reducer = (state = initialState, action) => {
         filteredHeroes:
           action.payload === "all"
             ? state.heroes
-            : state.heroes.filter(
-                (hero) => hero.element === state.activeFilter
-              ),
+            : state.heroes.filter((hero) => hero.element === action.payload),
       };
     default:
       return state;
