@@ -17,7 +17,6 @@ const HeroesAddForm = () => {
 
   const onCreateHero = (e) => {
     e.preventDefault();
-    console.log(e);
 
     const formData = {
       id: uuidv4(),
@@ -45,7 +44,7 @@ const HeroesAddForm = () => {
     }
 
     if (filters && filters.length > 0) {
-      filters.map(({ name, label }) => {
+      return filters.map(({ name, label }) => {
         // eslint-disable-next-line
         if (name === "all") return;
         //

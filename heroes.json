@@ -41,6 +41,18 @@
       "name": "Реджеп Річі-Джуніор Ждун",
       "description": "М'яу !",
       "element": ""
+    },
+    {
+      "id": "0a69ae10-6d42-4588-88b3-cae2e5d04cce",
+      "name": "John Cena",
+      "description": "His time is NOW !",
+      "element": "fire"
+    },
+    {
+      "id": "b1657816-e6d7-402f-b061-559be8de75cf",
+      "name": "Потужна людина",
+      "description": "Щось про персонажа",
+      "element": "fire"
     }
   ],
   "filters": [
