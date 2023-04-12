@@ -16,7 +16,7 @@ import {
 const HeroesFilters = () => {
   const { request } = useHttp();
   const { filters, filtersLoadingStatus, activeFilter } = useSelector(
-    (state) => state
+    (state) => state.filters
   );
   const dispatch = useDispatch();
 

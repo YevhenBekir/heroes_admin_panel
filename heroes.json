@@ -1,42 +1,6 @@
 {
   "heroes": [
     {
-      "id": 1,
-      "name": "Анатолій Андрійович",
-      "description": "The new Hero in the CD world",
-      "element": "water"
-    },
-    {
-      "id": 2,
-      "name": "Костянтин Борисович",
-      "description": "The new Hero in the CD world",
-      "element": "earth"
-    },
-    {
-      "id": 3,
-      "name": "Василь Вадимович",
-      "description": "The new Hero in the CD world",
-      "element": "fire"
-    },
-    {
-      "id": 5,
-      "name": "Павло Костянтинович",
-      "description": "The new Hero in the CD world",
-      "element": "water"
-    },
-    {
-      "id": 6,
-      "name": "Аркадій Полікарпович",
-      "description": "The new Hero in the CD world",
-      "element": "wind"
-    },
-    {
-      "id": 7,
-      "name": "Максим Володимирович",
-      "description": "The new Hero in the CD world",
-      "element": "water"
-    },
-    {
       "id": "c6848ff6-30a9-4ea9-a05f-87d0d2085d3c",
       "name": "Реджеп Річі-Джуніор Ждун",
       "description": "М'яу !",
@@ -49,10 +13,22 @@
       "element": "fire"
     },
     {
-      "id": "b1657816-e6d7-402f-b061-559be8de75cf",
-      "name": "Потужна людина",
-      "description": "Щось про персонажа",
-      "element": "fire"
+      "id": "21325c1e-44ca-4c52-93ed-89ea435f686c",
+      "name": "Дядько Валік",
+      "description": "Жорстоко грає в футбол",
+      "element": "wind"
+    },
+    {
+      "id": "61a7d556-bbdf-41f1-be77-aac447c0f4f3",
+      "name": "Могутній Посіпака",
+      "description": "Новий персонаж у DC-всесвіті",
+      "element": "earth"
+    },
+    {
+      "id": "bd476a07-86b6-4e92-b8b2-5dcc02bccf6e",
+      "name": "Скрудж МакДак",
+      "description": "DuckForbes - топ 1 серед надзвичайно багата качок",
+      "element": "water"
     }
   ],
   "filters": [
