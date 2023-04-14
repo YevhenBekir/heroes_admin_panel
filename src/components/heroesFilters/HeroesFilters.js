@@ -3,15 +3,12 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import classNames from "classnames";
 
-import {} from "../../actions/actions";
-import Spinner from "../spinner/Spinner";
-
 import {
-  filterFetchingError,
-  filtersFetching,
   filtersFetched,
   activeFilterChange,
-} from "../../actions/actions";
+} from "../../actions/filterActions";
+
+import Spinner from "../spinner/Spinner";
 
 const HeroesFilters = () => {
   const { request } = useHttp();
@@ -21,10 +18,11 @@ const HeroesFilters = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(filtersFetching());
+    //передаю НЕ об'єкт завдяки middleware
+    dispatch("FILTERS_FETCHING");
     request("http://localhost:3001/filters")
       .then((data) => dispatch(filtersFetched(data)))
-      .catch(dispatch(filterFetchingError()));
+      .catch(() => dispatch("FILTERS_FETCHING_ERROR"));
 
     // eslint-disable-next-line
   }, []);

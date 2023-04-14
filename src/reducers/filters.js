@@ -24,7 +24,7 @@ const filters = (state = initialState, action) => {
         ...state,
         filtersLoadingStatus: "error",
       };
-    //
+
     case "ACTIVE_FILTER":
       return {
         ...state,

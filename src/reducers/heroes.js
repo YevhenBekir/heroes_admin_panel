@@ -21,7 +21,7 @@ const heroes = (state = initialState, action) => {
         ...state,
         heroesLoadingStatus: "error",
       };
-    //
+
     case "CREATE_NEW_HERO":
       return {
         ...state,
