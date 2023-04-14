@@ -1,8 +1,8 @@
-// export const filtersFetching = () => {
-//   return {
-//     type: "FILTERS_FETCHING",
-//   };
-// };
+export const filtersFetching = () => {
+  return {
+    type: "FILTERS_FETCHING",
+  };
+};
 
 export const filtersFetched = (filters) => {
   return {
@@ -11,11 +11,11 @@ export const filtersFetched = (filters) => {
   };
 };
 
-// export const filterFetchingError = () => {
-//   return {
-//     type: "FILTERS_FETCHING_ERROR",
-//   };
-// };
+export const filterFetchingError = () => {
+  return {
+    type: "FILTERS_FETCHING_ERROR",
+  };
+};
 
 export const activeFilterChange = (filterName) => {
   return {

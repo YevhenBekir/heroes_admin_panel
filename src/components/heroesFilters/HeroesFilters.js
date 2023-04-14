@@ -4,7 +4,9 @@ import { useSelector, useDispatch } from "react-redux";
 import classNames from "classnames";
 
 import {
+  filtersFetching,
   filtersFetched,
+  filterFetchingError,
   activeFilterChange,
 } from "../../actions/filterActions";
 
@@ -18,11 +20,11 @@ const HeroesFilters = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    //передаю НЕ об'єкт завдяки middleware
-    dispatch("FILTERS_FETCHING");
+    //передаю функцію завдяки redux-thunk
+    dispatch(filtersFetching);
     request("http://localhost:3001/filters")
       .then((data) => dispatch(filtersFetched(data)))
-      .catch(() => dispatch("FILTERS_FETCHING_ERROR"));
+      .catch(() => dispatch(filterFetchingError));
 
     // eslint-disable-next-line
   }, []);

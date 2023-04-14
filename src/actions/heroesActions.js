@@ -1,8 +1,8 @@
-// export const heroesFetching = () => {
-//   return {
-//     type: "HEROES_FETCHING",
-//   };
-// };
+export const heroesFetching = () => {
+  return {
+    type: "HEROES_FETCHING",
+  };
+};
 
 export const heroesFetched = (heroes) => {
   return {
@@ -11,11 +11,11 @@ export const heroesFetched = (heroes) => {
   };
 };
 
-// export const heroesFetchingError = () => {
-//   return {
-//     type: "HEROES_FETCHING_ERROR",
-//   };
-// };
+export const heroesFetchingError = () => {
+  return {
+    type: "HEROES_FETCHING_ERROR",
+  };
+};
 
 export const heroCreated = (hero) => {
   return {
