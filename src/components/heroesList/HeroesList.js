@@ -3,12 +3,7 @@ import { useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createSelector } from "reselect";
 
-import {
-  heroesFetching,
-  heroesFetched,
-  heroesFetchingError,
-  heroDelete,
-} from "../../actions/heroesActions";
+import { heroesFetch, heroDelete } from "../../actions/heroesActions";
 import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from "../spinner/Spinner";
 
@@ -45,10 +40,8 @@ const HeroesList = () => {
   const { request } = useHttp();
 
   useEffect(() => {
-    dispatch(heroesFetching);
-    request("http://localhost:3001/heroes")
-      .then((data) => dispatch(heroesFetched(data)))
-      .catch(() => dispatch(heroesFetchingError));
+    //діспетчу ФУНКЦІЮ, яка буде робити запит на сервер за героями і в цілому - сама буде діспетчити потрібні дані в reducer()
+    dispatch(heroesFetch(request));
 
     // eslint-disable-next-line
   }, []);

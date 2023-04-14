@@ -19,16 +19,16 @@
       "element": "wind"
     },
     {
-      "id": "61a7d556-bbdf-41f1-be77-aac447c0f4f3",
-      "name": "Могутній Посіпака",
-      "description": "Новий персонаж у DC-всесвіті",
-      "element": "earth"
-    },
-    {
       "id": "3297c4f6-bb88-40bc-b7bc-1fec16f74e7f",
       "name": "Скрудж МакДак",
       "description": "DuckForbes - топ 1 серед надзвичайно багатих качок",
       "element": "water"
+    },
+    {
+      "id": "a441610a-e59b-4daf-8778-c39a6bf09661",
+      "name": "Двейн Джонсон",
+      "description": "Ви не уявляєте, що Скала для вас приготував !",
+      "element": "fire"
     }
   ],
   "filters": [

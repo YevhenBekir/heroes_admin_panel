@@ -3,12 +3,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import classNames from "classnames";
 
-import {
-  filtersFetching,
-  filtersFetched,
-  filterFetchingError,
-  activeFilterChange,
-} from "../../actions/filterActions";
+import { filtersFetch, activeFilterChange } from "../../actions/filterActions";
 
 import Spinner from "../spinner/Spinner";
 
@@ -20,11 +15,8 @@ const HeroesFilters = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    //передаю функцію завдяки redux-thunk
-    dispatch(filtersFetching);
-    request("http://localhost:3001/filters")
-      .then((data) => dispatch(filtersFetched(data)))
-      .catch(() => dispatch(filterFetchingError));
+    //діспетчу ФУНКЦІЮ, яка буде робити запит на сервер за фільтрами і в цілому - сама буде діспетчити потрібні дані в reducer()
+    dispatch(filtersFetch(request));
 
     // eslint-disable-next-line
   }, []);
