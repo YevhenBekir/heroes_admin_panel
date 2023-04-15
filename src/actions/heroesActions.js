@@ -22,22 +22,25 @@ export const heroesFetching = createAction("HEROES_FETCHING");
 // };
 export const heroesFetched = createAction("HEROES_FETCHED");
 
-export const heroesFetchingError = () => {
-  return {
-    type: "HEROES_FETCHING_ERROR",
-  };
-};
+// export const heroesFetchingError = () => {
+//   return {
+//     type: "HEROES_FETCHING_ERROR",
+//   };
+// };
+export const heroesFetchingError = createAction("HEROES_FETCHING_ERROR");
 
-export const heroCreated = (hero) => {
-  return {
-    type: "CREATE_NEW_HERO",
-    payload: hero,
-  };
-};
+// export const heroCreated = (hero) => {
+//   return {
+//     type: "CREATE_NEW_HERO",
+//     payload: hero,
+//   };
+// };
+export const heroCreated = createAction("CREATE_NEW_HERO");
 
-export const heroDelete = (id) => {
-  return {
-    type: "DELETE_ONE_HERO",
-    payload: id,
-  };
-};
+// export const heroDelete = (id) => {
+//   return {
+//     type: "DELETE_ONE_HERO",
+//     payload: id,
+//   };
+// };
+export const heroDelete = createAction("DELETE_ONE_HERO");
