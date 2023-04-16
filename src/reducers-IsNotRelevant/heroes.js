@@ -1,39 +1,42 @@
-import { createReducer } from "@reduxjs/toolkit";
+//Я НЕ КОРИСТУВАТИМУСЯ РЕДЮСЕРАМИ, ЩО НИЖЧЕ, ОСКІЛЬКИ Я ЇХ СТВОРИВ ЗАВДЯКИ createSlice() В heroesSlice.js
 
-import {
-  heroesFetching,
-  heroesFetched,
-  heroesFetchingError,
-  heroCreated,
-  heroDelete,
-} from "../actions/heroesActions";
+// import { createReducer } from "@reduxjs/toolkit";
 
-const initialState = {
-  heroes: [],
-  heroesLoadingStatus: "idle",
-};
+// import {
+//   heroesFetching,
+//   heroesFetched,
+//   heroesFetchingError,
+//   heroCreated,
+//   heroDelete,
+// } from "../actions/heroesActions";
 
-const heroes = createReducer(initialState, (builder) => {
-  builder
-    .addCase(heroesFetching, (state) => {
-      state.heroesLoadingStatus = "loading";
-    })
-    .addCase(heroesFetched, (state, action) => {
-      state.heroesLoadingStatus = "idle";
-      state.heroes = action.payload;
-    })
-    .addCase(heroesFetchingError, (state) => {
-      state.heroesLoadingStatus = "error";
-    })
-    .addCase(heroCreated, (state, action) => {
-      const newHeroList = [...state.heroes, action.payload];
-      state.heroes = newHeroList;
-    })
-    .addCase(heroDelete, (state, action) => {
-      state.heroes = state.heroes.filter((item) => item.id !== action.payload);
-    })
-    .addDefaultCase(() => {});
-});
+// const initialState = {
+//   heroes: [],
+//   heroesLoadingStatus: "idle",
+// };
+
+// const heroes = createReducer(initialState, (builder) => {
+//   builder
+//     .addCase(heroesFetching, (state) => {
+//       state.heroesLoadingStatus = "loading";
+//     })
+//     .addCase(heroesFetched, (state, action) => {
+//       state.heroesLoadingStatus = "idle";
+//       state.heroes = action.payload;
+//     })
+//     .addCase(heroesFetchingError, (state) => {
+//       state.heroesLoadingStatus = "error";
+//     })
+//     .addCase(heroCreated, (state, action) => {
+//       const newHeroList = [...state.heroes, action.payload];
+//       state.heroes = newHeroList;
+//     })
+//     .addCase(heroDelete, (state, action) => {
+//       state.heroes = state.heroes.filter((item) => item.id !== action.payload);
+//     })
+//     .addDefaultCase(() => {});
+// });
+//___________________________________________________________________
 
 //2 варіант створення reducer завдяки createReducer()
 // const heroes = createReducer(
@@ -60,6 +63,7 @@ const heroes = createReducer(initialState, (builder) => {
 //   [],
 //   (state) => state
 // );
+//___________________________________________________________________
 
 //Дефолтний синтаксис Redux іммутабельного reducer()
 // const heroes = (state = initialState, action) => {
@@ -96,4 +100,4 @@ const heroes = createReducer(initialState, (builder) => {
 //   }
 // };
 
-export default heroes;
+// export default heroes;

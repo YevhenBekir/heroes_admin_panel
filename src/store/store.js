@@ -1,6 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import filters from "../reducers/filters";
-import heroes from "../reducers/heroes";
+import filters from "../components/heroesFilters/filtersSlice";
+import heroes from "../components/heroesList/heroesSlice";
+// import filters from "../reducers-IsNotRelevant/filters";
+// import heroes from "../reducers-IsNotRelevant/heroes";
 
 const stringMiddleware = () => (next) => (action) => {
   if (typeof action === "string") {
@@ -11,6 +13,7 @@ const stringMiddleware = () => (next) => (action) => {
   return next(action);
 };
 
+//Функціонал сворення власного enhancer
 // const enhancer =
 //   (createStore) =>
 //   (...args) => {
@@ -30,6 +33,7 @@ const stringMiddleware = () => (next) => (action) => {
 //     return store;
 //   };
 
+//Дефолтний синтаксис створення Store
 // const store = createStore(
 //   combineReducers({ heroes: heroes, filters: filters }),
 //   compose(

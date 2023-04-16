@@ -1,4 +1,8 @@
-import { createAction } from "@reduxjs/toolkit";
+import {
+  heroesFetching,
+  heroesFetched,
+  heroesFetchingError,
+} from "../components/heroesList/heroesSlice";
 
 export const heroesFetch = (request) => (dispatch) => {
   dispatch(heroesFetching());
@@ -7,12 +11,15 @@ export const heroesFetch = (request) => (dispatch) => {
     .catch(() => dispatch(heroesFetchingError()));
 };
 
+//Я НЕ ВИКОРИСТОВУВАТИМУ ACTION CREATOR'И, ЩО НИЖЧЕ, ОСКІЛЬКИ Я ЇХ СТВОРЮЮ БЕЗПОСЕРЕДНЬО В createSlice() В heroesSlice.js
+
 // export const heroesFetching = () => {
 //   return {
 //     type: "HEROES_FETCHING",
 //   };
 // };
-export const heroesFetching = createAction("HEROES_FETCHING");
+//___________________________________________________________________
+// export const heroesFetching = createAction("HEROES_FETCHING");
 
 // export const heroesFetched = (heroes) => {
 //   return {
@@ -20,14 +27,16 @@ export const heroesFetching = createAction("HEROES_FETCHING");
 //     payload: heroes,
 //   };
 // };
-export const heroesFetched = createAction("HEROES_FETCHED");
+//___________________________________________________________________
+// export const heroesFetched = createAction("HEROES_FETCHED");
 
 // export const heroesFetchingError = () => {
 //   return {
 //     type: "HEROES_FETCHING_ERROR",
 //   };
 // };
-export const heroesFetchingError = createAction("HEROES_FETCHING_ERROR");
+//___________________________________________________________________
+// export const heroesFetchingError = createAction("HEROES_FETCHING_ERROR");
 
 // export const heroCreated = (hero) => {
 //   return {
@@ -35,7 +44,8 @@ export const heroesFetchingError = createAction("HEROES_FETCHING_ERROR");
 //     payload: hero,
 //   };
 // };
-export const heroCreated = createAction("CREATE_NEW_HERO");
+//___________________________________________________________________
+// export const heroCreated = createAction("CREATE_NEW_HERO");
 
 // export const heroDelete = (id) => {
 //   return {
@@ -43,4 +53,5 @@ export const heroCreated = createAction("CREATE_NEW_HERO");
 //     payload: id,
 //   };
 // };
-export const heroDelete = createAction("DELETE_ONE_HERO");
+//___________________________________________________________________
+// export const heroDelete = createAction("DELETE_ONE_HERO");

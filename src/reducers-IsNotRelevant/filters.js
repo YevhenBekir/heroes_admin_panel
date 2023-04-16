@@ -1,34 +1,37 @@
-import { createReducer } from "@reduxjs/toolkit";
+//Я НЕ КОРИСТУВАТИМУСЯ РЕДЮСЕРАМИ, ЩО НИЖЧЕ, ОСКІЛЬКИ Я ЇХ СТВОРИВ ЗАВДЯКИ createSlice() В filtersSlice.js
 
-import {
-  filtersFetching,
-  filtersFetched,
-  filterFetchingError,
-  activeFilterChange,
-} from "../actions/filterActions";
+// import { createReducer } from "@reduxjs/toolkit";
 
-const initialState = {
-  filters: [],
-  filtersLoadingStatus: "idle",
-  activeFilter: "all",
-};
+// import {
+//   filtersFetching,
+//   filtersFetched,
+//   filterFetchingError,
+//   activeFilterChange,
+// } from "../actions/filterActions";
 
-const filters = createReducer(initialState, (builder) => {
-  builder
-    .addCase(filtersFetching, (state) => {
-      state.filtersLoadingStatus = "loading";
-    })
-    .addCase(filtersFetched, (state, action) => {
-      state.filtersLoadingStatus = "idle";
-      state.filters = action.payload;
-    })
-    .addCase(filterFetchingError, (state) => {
-      state.filtersLoadingStatus = "error";
-    })
-    .addCase(activeFilterChange, (state, action) => {
-      state.activeFilter = action.payload;
-    });
-});
+// const initialState = {
+//   filters: [],
+//   filtersLoadingStatus: "idle",
+//   activeFilter: "all",
+// };
+
+// const filters = createReducer(initialState, (builder) => {
+//   builder
+//     .addCase(filtersFetching, (state) => {
+//       state.filtersLoadingStatus = "loading";
+//     })
+//     .addCase(filtersFetched, (state, action) => {
+//       state.filtersLoadingStatus = "idle";
+//       state.filters = action.payload;
+//     })
+//     .addCase(filterFetchingError, (state) => {
+//       state.filtersLoadingStatus = "error";
+//     })
+//     .addCase(activeFilterChange, (state, action) => {
+//       state.activeFilter = action.payload;
+//     });
+// });
+//___________________________________________________________________
 
 //2 варіант створення reducer завдяки createReducer()
 // const filters = createReducer(
@@ -51,6 +54,7 @@ const filters = createReducer(initialState, (builder) => {
 //   [],
 //   (state) => state
 // );
+//___________________________________________________________________
 
 //Дефолтний синтаксис Redux іммутабельного reducer()
 // const filters = (state = initialState, action) => {
@@ -84,4 +88,4 @@ const filters = createReducer(initialState, (builder) => {
 //   }
 // };
 
-export default filters;
+// export default filters;

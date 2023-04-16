@@ -1,4 +1,8 @@
-import { createAction } from "@reduxjs/toolkit";
+import {
+  filtersFetching,
+  filtersFetched,
+  filterFetchingError,
+} from "../components/heroesFilters/filtersSlice";
 
 export const filtersFetch = (request) => (dispatch) => {
   dispatch(filtersFetching());
@@ -7,12 +11,15 @@ export const filtersFetch = (request) => (dispatch) => {
     .catch(() => dispatch(filterFetchingError()));
 };
 
+//Я НЕ ВИКОРИСТОВУВАТИМУ ACTION CREATOR'И, ЩО НИЖЧЕ, ОСКІЛЬКИ Я ЇХ СТВОРЮЮ БЕЗПОСЕРЕДНЬО В createSlice() В filtersSlice.js
+
 // export const filtersFetching = () => {
 //   return {
 //     type: "FILTERS_FETCHING",
 //   };
 // };
-export const filtersFetching = createAction("FILTERS_FETCHING");
+//___________________________________________________________________
+// export const filtersFetching = createAction("FILTERS_FETCHING");
 
 // export const filtersFetched = (filters) => {
 //   return {
@@ -20,14 +27,16 @@ export const filtersFetching = createAction("FILTERS_FETCHING");
 //     payload: filters,
 //   };
 // };
-export const filtersFetched = createAction("FILTERS_FETCHED");
+//___________________________________________________________________
+// export const filtersFetched = createAction("FILTERS_FETCHED");
 
 // export const filterFetchingError = () => {
 //   return {
 //     type: "FILTERS_FETCHING_ERROR",
 //   };
 // };
-export const filterFetchingError = createAction("FILTERS_FETCHING_ERROR");
+//___________________________________________________________________
+// export const filterFetchingError = createAction("FILTERS_FETCHING_ERROR");
 
 // export const activeFilterChange = (filterName) => {
 //   return {
@@ -35,4 +44,5 @@ export const filterFetchingError = createAction("FILTERS_FETCHING_ERROR");
 //     payload: filterName,
 //   };
 // };
-export const activeFilterChange = createAction("ACTIVE_FILTER");
+//___________________________________________________________________
+// export const activeFilterChange = createAction("ACTIVE_FILTER");

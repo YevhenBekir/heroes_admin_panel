@@ -3,7 +3,8 @@ import { useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createSelector } from "reselect";
 
-import { heroesFetch, heroDelete } from "../../actions/heroesActions";
+import { heroesFetch } from "../../actions/heroesActions";
+import { heroDelete } from "./heroesSlice";
 import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from "../spinner/Spinner";
 
@@ -12,6 +13,7 @@ const HeroesList = () => {
     (state) => state.filters.activeFilter,
     (state) => state.heroes.heroes,
     (activeFilter, heroes) => {
+      console.log(`Now you're looking at - ${activeFilter} filter.`);
       if (activeFilter === "all") {
         return heroes;
       } else {
