@@ -1,10 +1,9 @@
 import { useHttp } from "../../hooks/http.hook";
 import { useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { createSelector } from "reselect";
+import { createSelector } from "@reduxjs/toolkit";
 
-import { heroesFetch } from "../../actions/heroesActions";
-import { heroDelete } from "./heroesSlice";
+import { heroDelete, heroesFetch } from "./heroesSlice";
 import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from "../spinner/Spinner";
 
@@ -42,8 +41,8 @@ const HeroesList = () => {
   const { request } = useHttp();
 
   useEffect(() => {
-    //діспетчу ФУНКЦІЮ, яка буде робити запит на сервер за героями і в цілому - сама буде діспетчити потрібні дані в reducer()
-    dispatch(heroesFetch(request));
+    //діспетчу ФУНКЦІЮ, яка буде робити запит на сервер за героями і в цілому - сама буде діспетчити потрібні дані в reducer(). Використовую createAsyncThunk()
+    dispatch(heroesFetch());
 
     // eslint-disable-next-line
   }, []);

@@ -1,15 +1,17 @@
-import {
-  heroesFetching,
-  heroesFetched,
-  heroesFetchingError,
-} from "../components/heroesList/heroesSlice";
+// Я БІЛЬШЕ НЕ ВИКОРИСТОВУВАТИМУ ЦІ Redux-Thunk ДІЇ, ТОМУ ЩО Я СТВОРИВ ЇХ ЗАВДЯКИ createAsyncThunk() В heroesSlice.js
+// import {
+//   heroesFetching,
+//   heroesFetched,
+//   heroesFetchingError,
+// } from "../components/heroesList/heroesSlice";
 
-export const heroesFetch = (request) => (dispatch) => {
-  dispatch(heroesFetching());
-  request("http://localhost:3001/heroes")
-    .then((data) => dispatch(heroesFetched(data)))
-    .catch(() => dispatch(heroesFetchingError()));
-};
+// export const heroesFetch = (request) => (dispatch) => {
+//   dispatch(heroesFetching());
+//   request("http://localhost:3001/heroes")
+//     .then((data) => dispatch(heroesFetched(data)))
+//     .catch(() => dispatch(heroesFetchingError()));
+// };
+//___________________________________________________________________
 
 //Я НЕ ВИКОРИСТОВУВАТИМУ ACTION CREATOR'И, ЩО НИЖЧЕ, ОСКІЛЬКИ Я ЇХ СТВОРЮЮ БЕЗПОСЕРЕДНЬО В createSlice() В heroesSlice.js
 

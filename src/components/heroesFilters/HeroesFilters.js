@@ -1,23 +1,20 @@
-import { useHttp } from "../../hooks/http.hook";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import classNames from "classnames";
 
-import { filtersFetch } from "../../actions/filterActions";
-import { activeFilterChange } from "./filtersSlice";
+import { activeFilterChange, filtersFetch } from "./filtersSlice";
 
 import Spinner from "../spinner/Spinner";
 
 const HeroesFilters = () => {
-  const { request } = useHttp();
   const { filters, filtersLoadingStatus, activeFilter } = useSelector(
     (state) => state.filters
   );
   const dispatch = useDispatch();
 
   useEffect(() => {
-    //діспетчу ФУНКЦІЮ, яка буде робити запит на сервер за фільтрами і в цілому - сама буде діспетчити потрібні дані в reducer()
-    dispatch(filtersFetch(request));
+    //діспетчу ФУНКЦІЮ, яка буде робити запит на сервер за фільтрами і в цілому - сама буде діспетчити потрібні дані в reducer(). Використовую createAsyncThunk()
+    dispatch(filtersFetch());
 
     // eslint-disable-next-line
   }, []);

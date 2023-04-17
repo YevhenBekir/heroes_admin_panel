@@ -1,15 +1,17 @@
-import {
-  filtersFetching,
-  filtersFetched,
-  filterFetchingError,
-} from "../components/heroesFilters/filtersSlice";
+// Я БІЛЬШЕ НЕ ВИКОРИСТОВУВАТИМУ ЦІ Redux-Thunk ДІЇ, ТОМУ ЩО Я СТВОРИВ ЇХ ЗАВДЯКИ createAsyncThunk() В filtersSlice.js
+// import {
+//   filtersFetching,
+//   filtersFetched,
+//   filterFetchingError,
+// } from "../components/heroesFilters/filtersSlice";
 
-export const filtersFetch = (request) => (dispatch) => {
-  dispatch(filtersFetching());
-  request("http://localhost:3001/filters")
-    .then((filters) => dispatch(filtersFetched(filters)))
-    .catch(() => dispatch(filterFetchingError()));
-};
+// export const filtersFetch = (request) => (dispatch) => {
+//   dispatch(filtersFetching());
+//   request("http://localhost:3001/filters")
+//     .then((filters) => dispatch(filtersFetched(filters)))
+//     .catch(() => dispatch(filterFetchingError()));
+// };
+//___________________________________________________________________
 
 //Я НЕ ВИКОРИСТОВУВАТИМУ ACTION CREATOR'И, ЩО НИЖЧЕ, ОСКІЛЬКИ Я ЇХ СТВОРЮЮ БЕЗПОСЕРЕДНЬО В createSlice() В filtersSlice.js
 
