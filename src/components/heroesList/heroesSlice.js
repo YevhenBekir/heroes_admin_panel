@@ -1,10 +1,32 @@
 import { useHttp } from "../../hooks/http.hook";
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import {
+  createSlice,
+  createAsyncThunk,
+  createSelector,
+  createEntityAdapter,
+} from "@reduxjs/toolkit";
 
-const initialState = {
-  heroes: [],
+//Видалив стейт, та сформував його завдяки - createEntityAdapter()
+const heroesAdapter = createEntityAdapter();
+
+const { selectAll } = heroesAdapter.getSelectors((state) => state.heroes);
+
+export const filteredHeroesSelector = createSelector(
+  (state) => state.filters.activeFilter,
+  selectAll,
+  (activeFilter, heroes) => {
+    console.log(`Now you're looking at - ${activeFilter} filter.`);
+    if (activeFilter === "all") {
+      return heroes;
+    } else {
+      return heroes.filter((item) => item.element === activeFilter);
+    }
+  }
+);
+
+const initialState = heroesAdapter.getInitialState({
   heroesLoadingStatus: "idle",
-};
+});
 
 export const heroesFetch = createAsyncThunk("heroes/heroesFetch", async () => {
   const { request } = useHttp();
@@ -16,11 +38,10 @@ const heroesSlice = createSlice({
   initialState,
   reducers: {
     heroCreated: (state, action) => {
-      const newHeroList = [...state.heroes, action.payload];
-      state.heroes = newHeroList;
+      heroesAdapter.addOne(state, action.payload);
     },
     heroDelete: (state, action) => {
-      state.heroes = state.heroes.filter((item) => item.id !== action.payload);
+      heroesAdapter.removeOne(state, action.payload);
     },
   },
   extraReducers: (builder) => {
@@ -30,7 +51,7 @@ const heroesSlice = createSlice({
       })
       .addCase(heroesFetch.fulfilled, (state, action) => {
         state.heroesLoadingStatus = "idle";
-        state.heroes = action.payload;
+        heroesAdapter.setAll(state, action.payload);
       })
       .addCase(heroesFetch.rejected, (state) => {
         state.heroesLoadingStatus = "error";
@@ -42,10 +63,5 @@ const heroesSlice = createSlice({
 const { actions, reducer } = heroesSlice;
 
 export default reducer;
-export const {
-  heroesFetching,
-  heroesFetched,
-  heroesFetchingError,
-  heroCreated,
-  heroDelete,
-} = actions;
+
+export const { heroCreated, heroDelete } = actions;

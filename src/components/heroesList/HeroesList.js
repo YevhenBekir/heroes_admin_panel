@@ -1,38 +1,12 @@
 import { useHttp } from "../../hooks/http.hook";
 import { useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { createSelector } from "@reduxjs/toolkit";
 
-import { heroDelete, heroesFetch } from "./heroesSlice";
+import { heroDelete, heroesFetch, filteredHeroesSelector } from "./heroesSlice";
 import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from "../spinner/Spinner";
 
 const HeroesList = () => {
-  const filteredHeroesSelector = createSelector(
-    (state) => state.filters.activeFilter,
-    (state) => state.heroes.heroes,
-    (activeFilter, heroes) => {
-      console.log(`Now you're looking at - ${activeFilter} filter.`);
-      if (activeFilter === "all") {
-        return heroes;
-      } else {
-        return heroes.filter((item) => item.element === activeFilter);
-      }
-    }
-  );
-
-  //Те саме створення масиву з фільтрованими героями, але через пряме витягування значень з глобального стейту
-  // const filteredHeroes = useSelector((state) => {
-  //   if (state.filters.activeFilter === "all") {
-  //     console.log("rerender");
-  //     return state.heroes.heroes;
-  //   } else {
-  //     return state.heroes.heroes.filter(
-  //       (item) => item.element === state.filters.activeFilter
-  //     );
-  //   }
-  // });
-
   const filteredHeroes = useSelector(filteredHeroesSelector);
   const heroesLoadingStatus = useSelector(
     (state) => state.heroes.heroesLoadingStatus
