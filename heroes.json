@@ -7,28 +7,16 @@
       "element": ""
     },
     {
-      "id": "0a69ae10-6d42-4588-88b3-cae2e5d04cce",
-      "name": "John Cena",
-      "description": "His time is NOW !",
-      "element": "fire"
-    },
-    {
-      "id": "3297c4f6-bb88-40bc-b7bc-1fec16f74e7f",
-      "name": "Скрудж МакДак",
-      "description": "DuckForbes - топ 1 серед надзвичайно багатих качок",
-      "element": "water"
-    },
-    {
-      "id": "a441610a-e59b-4daf-8778-c39a6bf09661",
-      "name": "Двейн Джонсон",
-      "description": "Ви не уявляєте, що Скала для вас приготував !",
-      "element": "fire"
-    },
-    {
       "id": "e53724ef-8f96-46b6-b192-101aef57a069",
       "name": "Гласс Брокен",
       "description": "Трикратний чемпіон по вибиванню вікон",
       "element": "earth"
+    },
+    {
+      "id": "0c219272-5c35-4b44-a9c0-1c07ee3c99ea",
+      "name": "Володимир Емінем",
+      "description": "Гарні пісні має козак !",
+      "element": "water"
     }
   ],
   "filters": [

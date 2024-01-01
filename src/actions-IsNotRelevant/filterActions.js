@@ -1,4 +1,4 @@
-// Я БІЛЬШЕ НЕ ВИКОРИСТОВУВАТИМУ ЦІ Redux-Thunk ДІЇ, ТОМУ ЩО Я СТВОРИВ ЇХ ЗАВДЯКИ createAsyncThunk() В filtersSlice.js
+// I WON'T USE THESE REDUX-THUNK ACTIONS ANYMORE BECAUSE I CREATED THEM WITH createAsyncThunk() IN filtersSlice.js
 // import {
 //   filtersFetching,
 //   filtersFetched,
@@ -11,16 +11,16 @@
 //     .then((filters) => dispatch(filtersFetched(filters)))
 //     .catch(() => dispatch(filterFetchingError()));
 // };
-//___________________________________________________________________
 
-//Я НЕ ВИКОРИСТОВУВАТИМУ ACTION CREATOR'И, ЩО НИЖЧЕ, ОСКІЛЬКИ Я ЇХ СТВОРЮЮ БЕЗПОСЕРЕДНЬО В createSlice() В filtersSlice.js
 
+
+// I WON'T USE THE ACTION CREATORS BELOW BECAUSE I CREATE THEM DIRECTLY IN createSlice() IN filtersSlice.js
 // export const filtersFetching = () => {
 //   return {
 //     type: "FILTERS_FETCHING",
 //   };
 // };
-//___________________________________________________________________
+
 // export const filtersFetching = createAction("FILTERS_FETCHING");
 
 // export const filtersFetched = (filters) => {
@@ -29,7 +29,7 @@
 //     payload: filters,
 //   };
 // };
-//___________________________________________________________________
+
 // export const filtersFetched = createAction("FILTERS_FETCHED");
 
 // export const filterFetchingError = () => {
@@ -37,7 +37,7 @@
 //     type: "FILTERS_FETCHING_ERROR",
 //   };
 // };
-//___________________________________________________________________
+
 // export const filterFetchingError = createAction("FILTERS_FETCHING_ERROR");
 
 // export const activeFilterChange = (filterName) => {
@@ -46,5 +46,5 @@
 //     payload: filterName,
 //   };
 // };
-//___________________________________________________________________
+
 // export const activeFilterChange = createAction("ACTIVE_FILTER");

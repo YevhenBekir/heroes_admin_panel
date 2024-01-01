@@ -1,4 +1,4 @@
-// Я БІЛЬШЕ НЕ ВИКОРИСТОВУВАТИМУ ЦІ Redux-Thunk ДІЇ, ТОМУ ЩО Я СТВОРИВ ЇХ ЗАВДЯКИ createAsyncThunk() В heroesSlice.js
+// I WON'T USE THESE REDUX-THUNK ACTIONS BECAUSE I CREATED THEM WITH createAsyncThunk() IN heroesSlice.js
 // import {
 //   heroesFetching,
 //   heroesFetched,
@@ -11,16 +11,15 @@
 //     .then((data) => dispatch(heroesFetched(data)))
 //     .catch(() => dispatch(heroesFetchingError()));
 // };
-//___________________________________________________________________
 
-//Я НЕ ВИКОРИСТОВУВАТИМУ ACTION CREATOR'И, ЩО НИЖЧЕ, ОСКІЛЬКИ Я ЇХ СТВОРЮЮ БЕЗПОСЕРЕДНЬО В createSlice() В heroesSlice.js
 
+
+// I WON'T USE THE ACTION CREATORS BELOW BECAUSE I CREATE THEM DIRECTLY IN createSlice() IN heroesSlice.js
 // export const heroesFetching = () => {
 //   return {
 //     type: "HEROES_FETCHING",
 //   };
 // };
-//___________________________________________________________________
 // export const heroesFetching = createAction("HEROES_FETCHING");
 
 // export const heroesFetched = (heroes) => {
@@ -29,7 +28,7 @@
 //     payload: heroes,
 //   };
 // };
-//___________________________________________________________________
+
 // export const heroesFetched = createAction("HEROES_FETCHED");
 
 // export const heroesFetchingError = () => {
@@ -37,7 +36,7 @@
 //     type: "HEROES_FETCHING_ERROR",
 //   };
 // };
-//___________________________________________________________________
+
 // export const heroesFetchingError = createAction("HEROES_FETCHING_ERROR");
 
 // export const heroCreated = (hero) => {
@@ -46,7 +45,7 @@
 //     payload: hero,
 //   };
 // };
-//___________________________________________________________________
+
 // export const heroCreated = createAction("CREATE_NEW_HERO");
 
 // export const heroDelete = (id) => {
@@ -55,5 +54,5 @@
 //     payload: id,
 //   };
 // };
-//___________________________________________________________________
+
 // export const heroDelete = createAction("DELETE_ONE_HERO");

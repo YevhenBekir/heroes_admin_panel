@@ -13,7 +13,7 @@ const stringMiddleware = () => (next) => (action) => {
   return next(action);
 };
 
-//Функціонал сворення власного enhancer
+// Functionality of creating your own enhancer
 // const enhancer =
 //   (createStore) =>
 //   (...args) => {
@@ -33,7 +33,7 @@ const stringMiddleware = () => (next) => (action) => {
 //     return store;
 //   };
 
-//Дефолтний синтаксис створення Store
+// Default syntax for creating a Store
 // const store = createStore(
 //   combineReducers({ heroes: heroes, filters: filters }),
 //   compose(

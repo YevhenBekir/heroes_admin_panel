@@ -1,4 +1,4 @@
-//Я НЕ КОРИСТУВАТИМУСЯ РЕДЮСЕРАМИ, ЩО НИЖЧЕ, ОСКІЛЬКИ Я ЇХ СТВОРИВ ЗАВДЯКИ createSlice() В filtersSlice.js
+// I WON'T USE THE EDITORS BELOW BECAUSE I CREATED THEM BY CALLING createSlice() in filtersSlice.js
 
 // import { createReducer } from "@reduxjs/toolkit";
 
@@ -31,9 +31,10 @@
 //       state.activeFilter = action.payload;
 //     });
 // });
-//___________________________________________________________________
 
-//2 варіант створення reducer завдяки createReducer()
+
+
+// SECOND WAY TO CREATION A REDUCER WITH createReducer()
 // const filters = createReducer(
 //   initialState,
 //   {
@@ -54,9 +55,10 @@
 //   [],
 //   (state) => state
 // );
-//___________________________________________________________________
 
-//Дефолтний синтаксис Redux іммутабельного reducer()
+
+
+// DEFAUL REDUX SYNTAX FOR IMMUTABLE reducer()
 // const filters = (state = initialState, action) => {
 //   switch (action.type) {
 //     case "FILTERS_FETCHING":

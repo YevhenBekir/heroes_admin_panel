@@ -1,4 +1,4 @@
-//Я НЕ КОРИСТУВАТИМУСЯ РЕДЮСЕРАМИ, ЩО НИЖЧЕ, ОСКІЛЬКИ Я ЇХ СТВОРИВ ЗАВДЯКИ createSlice() В heroesSlice.js
+// I WON'T USE THE EDITORS BELOW BECAUSE I CREATED THEM BY CREATING THEY WITH createSlice() in heroesSlice.js
 
 // import { createReducer } from "@reduxjs/toolkit";
 
@@ -36,9 +36,10 @@
 //     })
 //     .addDefaultCase(() => {});
 // });
-//___________________________________________________________________
 
-//2 варіант створення reducer завдяки createReducer()
+
+
+// SECOND WAY TO CREATE A REDUCER WITH createReducer()
 // const heroes = createReducer(
 //   initialState,
 //   {
@@ -63,9 +64,10 @@
 //   [],
 //   (state) => state
 // );
-//___________________________________________________________________
 
-//Дефолтний синтаксис Redux іммутабельного reducer()
+
+
+// DEFAULT REDUX SYNTAX FOR IMMUTABLE reducer()
 // const heroes = (state = initialState, action) => {
 //   switch (action.type) {
 //     case "HEROES_FETCHING":
